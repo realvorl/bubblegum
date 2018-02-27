@@ -10,7 +10,7 @@ but these are overpowered and / or overkill, take to much time to setup when you
  - a simple Node Js Server
  - check on network level (ping)
  - check on application level (get) 
- - display a color code RED, GREEN or YELLOW to map 5XX error, 2XX Status and everything in between
+ - display a color code <span style="text:red">RED</span>, GREEN or YELLOW to map 5XX error, 2XX Status and everything in between
  - easy configuration for adding components that should be monitored
  # usage
  ## preparation
