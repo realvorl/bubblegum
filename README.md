@@ -24,3 +24,7 @@ but these are overpowered and / or overkill, take to much time to setup when you
  4. open your favorite browser and open `http://localhost:3000`
  
  ### HAPPY MONITORING!
+
+![alt text][logo]
+
+[logo]: https://github.com/realvorl/bubblegum/blob/master/all-greens.png "What to expect"
