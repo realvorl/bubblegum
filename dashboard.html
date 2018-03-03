@@ -15,7 +15,9 @@
         //sync" onclick="milk(this)" data-domain="'+obj.domain+'" data-path="'+obj.path+'"
         $timestamp = jQuery("<p class='timestamp sync' onclick='milk(this)' data-domain='"+domain+"' data-path='"+path+"'>"+(new Date()).toLocaleTimeString()+"</p>");
         $toUpdate.prepend($timestamp);
-        $toUpdate.append(data);
+        var $followTheRabbit = jQuery("<a target='_blank' class='right-floater' href='https://"+(domain+path)+"'></a>");
+        $followTheRabbit.append(data);
+        $toUpdate.append($followTheRabbit);
       },"html")
     }
 

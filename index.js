@@ -26,18 +26,19 @@ app.get("/hosts2lookup", function (request, response) {
 });
 
 app.get("/check", function (request, response) {
-  console.log(`GET '/check'  ${Date()}`);
+  try {
+    console.log(`GET '/check'  ${Date()}`);
     var domain = decodeURIComponent(request.query.domain);
     var path = decodeURIComponent(request.query.path);
     tcpp.probe(domain, 80, function(err, available) {
       console.log("tcpp err: ", err + " / " + available)
       if (available) {
         var options = {
-            host: domain,
-            port: 80,
-            method:"GET",
-            path: path,
-            followAllRedirects: true
+          host: domain,
+          port: 80,
+          method:"GET",
+          path: path,
+          followAllRedirects: true
         };
         var filename = "";
         http.get(options, function(res) {
@@ -52,6 +53,9 @@ app.get("/check", function (request, response) {
         makeDecision("red.html", response);
       }
     });
+  } catch (e) {
+    console.log("serious fail: ", e);
+  }
 });
 
 var makeDecision = function(filename, response) {
