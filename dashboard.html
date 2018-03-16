@@ -8,12 +8,14 @@
       //console.log("onclick");
       var domain = jQuery(event).data("domain");
       var path = jQuery(event).data("path");
+      var portfromfile = jQuery(event).data("port");
+
       $toUpdate.find("div").addClass("loader");
-      jQuery.get("/check?domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(path),function(data,status,xhr){
+      jQuery.get("/check?domain="+encodeURIComponent(domain)+"&path="+encodeURIComponent(path)+"&port="+encodeURIComponent(portfromfile),function(data,status,xhr){
         $toUpdate.find("div").remove();
         $toUpdate.find("p.timestamp").remove();
         //sync" onclick="milk(this)" data-domain="'+obj.domain+'" data-path="'+obj.path+'"
-        $timestamp = jQuery("<p class='timestamp sync' onclick='milk(this)' data-domain='"+domain+"' data-path='"+path+"'>"+(new Date()).toLocaleTimeString()+"</p>");
+        $timestamp = jQuery("<p class='timestamp sync' onclick='milk(this)' data-domain='"+domain+"' data-path='"+path+"' data-port='"+portfromfile+"'>"+(new Date()).toLocaleTimeString()+"</p>");
         $toUpdate.prepend($timestamp);
         var $followTheRabbit = jQuery("<a target='_blank' class='right-floater' href='https://"+(domain+path)+"'></a>");
         $followTheRabbit.append(data);
@@ -29,7 +31,7 @@
           jQuery.each(island.areas, function(idx, obj){
             //console.log("element: ", obj);
             $wrapper = jQuery('<div class="led-box"/>');
-            $initial = jQuery('<p class="timestamp sync" onclick="milk(this)" data-domain="'+obj.domain+'" data-path="'+obj.path+'"> - never inquired - </p>');
+            $initial = jQuery('<p class="timestamp sync" onclick="milk(this)" data-domain="'+obj.domain+'" data-path="'+obj.path+'" data-port="'+(obj.port || 80) +'"> - never inquired - </p>');
             $label = jQuery('<span>'+obj.title+'</span>');
             $initialBlue = jQuery('<div class="led-blue"/>');
             $wrapper.append($initial);
