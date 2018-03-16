@@ -1,5 +1,6 @@
 var express = require('express');
 var http = require('follow-redirects').http;
+var https = require('follow-redirects').https;
 
 /*
 /     Express Server Setup
@@ -27,18 +28,22 @@ app.get("/check", function (request, response) {
     //console.log(`GET '/check'  ${Date()}`);
     var domain = decodeURIComponent(request.query.domain);
     var path = decodeURIComponent(request.query.path);
+    var portfromfile = decodeURIComponent(request.query.port);
+    console.log(portfromfile + ' ################################# ')
     var filename = "";
     var checkPromise = new Promise(function(resolve, reject) {
         var options = {
             host: domain,
-            port: 80,
+            port: portfromfile,
             method: "GET",
             path: path,
-            followAllRedirects: true
+            followAllRedirects: true,
+            rejectUnauthorized: false
         };
-        var getReq = http.get(options, function (res) {
-            resolve(res);
-        });
+
+        var getReq = (portfromfile==80 ? http : https).get(options, function (res) {
+                resolve(res);
+            });
 
         getReq.on("error",function (event) {
             reject(event);
