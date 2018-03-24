@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Street from "./Street";
 
 class Island extends Component {
     render() {
@@ -8,8 +9,8 @@ class Island extends Component {
             stages = _this.lookups.map(entry => {
                 console.log(entry);
                 return (
-                <span>{entry.additional}:: {entry.domain}/{entry.path}</span>
-               );
+                    <Street stage={entry.additional} domain={entry.domain} path={entry.path}/>
+                );
             });
         }
         return (

@@ -51,14 +51,14 @@ class App extends Component {
                 title: "Island: 9GAG",
                 lookups: [{
                     title: "9GAG",
-                    additional: "DE",
+                    additional: "COM",
                     domain: "9gag.com",
                     path: ""
                 }, {
                     title: "9GAG",
-                    additional: "Trending",
+                    additional: "COM",
                     domain: "9gag.com",
-                    path: "/trending"
+                    path: "trending"
                 }]
             }]
         }
