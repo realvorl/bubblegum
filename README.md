@@ -27,4 +27,4 @@ but these are overpowered and / or overkill, take to much time to setup when you
 
 ![alt text][logo]
 
-[logo]: https://github.com/realvorl/bubblegum/blob/master/all-greens.png "What to expect"
+[logo]: https://github.com/realvorl/bubblegum/blob/reacting/all-greens.png "What to expect"
