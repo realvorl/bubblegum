@@ -1,11 +1,11 @@
 {
 	"name": "monitor-ms",
 	"repository": "monitor-ms",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"description": "display an LED indicator for every microservice",
-	"main": "server.js",
+	"main": "index.js",
 	"scripts": {
-		"start": "node server.js"
+		"start": "node index.js"
 	},
 	"dependencies": {
 		"express": "^4.15.2",

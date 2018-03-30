@@ -17,11 +17,11 @@ but these are overpowered and / or overkill, take to much time to setup when you
  * ensure you have `node` installed
  * clone this project
  * `cd into the directory` where you cloned this project
+ * run `./install.sh`
+ * edit `bubble-dash/src/stateAndHost.json` according to your needs and save
  ## operating
- 1. run `npm install`
- 2. configure `hosts.json` to your needs
- 3. run `node index.js`
- 4. open your favorite browser and open `http://localhost:3000`
+ 1. run `./launch.sh`
+ 2. your standard browser should open (`http://localhost:3000`)
  
  ### HAPPY MONITORING!
 

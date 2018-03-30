@@ -67,13 +67,54 @@ span.path {
     font-family: monospace;
 }
 
-a.status{
+a {
     float: right;
-    border-radius: 10px;
+    border-radius: 20px;
     font-size: 6px;
     height: 20px;
     width: 20px;
+    border:2px solid #f2f2f2;
+    stroke: #0a1608;
+    stroke-width: 2px;
+}
+
+a[class^="_20"]{
     background-color: darkgreen;
+}
+
+a[class^="_50"]{
+    background-color: darkred;
+}
+
+a[class^="_40"]{
+    background-color: #e59123;
+}
+
+a._blue{
+    float: right;
+    border-radius: 20px;
+    font-size: 6px;
+    height: 20px;
+    width: 20px;
+    background-color: lightcyan;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0% {background-color: #85ffab;}
+    50% {background-color: #efde5b;}
+    100% {background-color: #85ffab;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0% {background-color: #85ffab;}
+    50% {background-color: #efde5b;}
+    100% {background-color: #85ffab;}
 }
 
 .container {

@@ -1,67 +1,15 @@
 import React, {Component} from 'react';
 import Islands from './components/Islands'
 import Header from './components/Header'
-import './App.css';
+import './App.css'
+import jsonConfig from './stateAndHost.json'
+
 class App extends Component {
+
 
     constructor() {
         super();
-        this.state = {
-            header: {
-                mainTitle: "BUBBLE-GUM",
-                buttonLabel: "* * *"
-            },
-            islands: [{
-                title: "Island: google",
-                lookups: [{
-                    title: "Google",
-                    additional: "DE",
-                    domain: "google.de",
-                    path: ""
-                }, {
-                    title: "Google",
-                    additional: "AT",
-                    domain: "google.at",
-                    path: ""
-                }, {
-                    title: "Google",
-                    additional: "RO",
-                    domain: "google.ro",
-                    path: ""
-                }]
-            }, {
-                title: "Island: Amazon",
-                lookups: [{
-                    title: "Amazon",
-                    additional: "DE",
-                    domain: "amazon.de",
-                    path: ""
-                }, {
-                    title: "Amazon",
-                    additional: "AT",
-                    domain: "amazon.at",
-                    path: ""
-                }, {
-                    title: "Amazon",
-                    additional: "RO",
-                    domain: "amazon.ro",
-                    path: ""
-                }]
-            }, {
-                title: "Island: 9GAG",
-                lookups: [{
-                    title: "9GAG",
-                    additional: "COM",
-                    domain: "9gag.com",
-                    path: ""
-                }, {
-                    title: "9GAG",
-                    additional: "COM",
-                    domain: "9gag.com",
-                    path: "trending"
-                }]
-            }]
-        }
+        this.state = jsonConfig;
     }
 
     render() {

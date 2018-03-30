@@ -9,7 +9,7 @@ class Islands extends Component {
 
         if (this.props.allIslands) {
             islands = this.props.allIslands.map(island => {
-                console.log(island);
+                //console.log(island);
                 return (
                     <Island key={island.title} layout={island}/>
                 );
