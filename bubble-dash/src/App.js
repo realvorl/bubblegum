@@ -15,8 +15,8 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <Header headerTitle={this.state.header.mainTitle} buttonLabel={this.state.header.buttonLabel}/>
-                <Islands allIslands={this.state.islands}/>
+                <Header headerTitle={this.state.header.mainTitle} refresh={this.state.header.refresh} buttonLabel={this.state.header.buttonLabel}/>
+                <Islands allIslands={this.state.islands} refresh={this.state.header.refresh} />
             </div>
         );
     }

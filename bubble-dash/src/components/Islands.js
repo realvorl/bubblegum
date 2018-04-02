@@ -11,7 +11,7 @@ class Islands extends Component {
             islands = this.props.allIslands.map(island => {
                 //console.log(island);
                 return (
-                    <Island key={island.title} layout={island}/>
+                    <Island key={island.title} layout={island} refresh={this.props.refresh} />
                 );
             });
         }

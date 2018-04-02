@@ -1,7 +1,8 @@
 {
   "header": {
     "mainTitle": "BUBBLE-GUM",
-    "buttonLabel": "* * *"
+    "buttonLabel": "* * *",
+    "refresh": 90
   },
   "islands": [
     {

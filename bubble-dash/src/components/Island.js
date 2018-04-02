@@ -5,6 +5,21 @@ import Draggable, {DraggableCore} from 'react-draggable'; // Both at the same ti
 
 class Island extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {time: 0};
+    }
+
+    update() {
+        this.setState({time: Date.now()});
+        this.render();
+    }
+
+    componentDidMount() {
+        let seconds = this.props.refresh >= 15 ? this.props.refresh : 15;
+        setInterval(() => this.update(), seconds * 1000);
+    }
+
     render() {
         let stages;
         let _this = this.props.layout;
@@ -12,11 +27,12 @@ class Island extends Component {
             stages = _this.lookups.map(entry => {
                 //console.log(entry);
                 return (
-                    <Street key={entry.domain + entry.additional + entry.path} stage={entry.additional}
+                    <Street key={this.state.time++} stage={entry.additional}
                             domain={entry.domain} path={entry.path} linkClass="_blue"/>
                 );
             });
         }
+
         return (
             <Draggable>
                 <div className="island">

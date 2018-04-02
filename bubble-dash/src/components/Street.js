@@ -12,12 +12,14 @@ class Street extends Component {
         fetch("/check?domain=" + encodeURIComponent(_this.domain) + "&path=" + encodeURIComponent(_this.path) + "&port=80")
             .then(response => {/*console.log(response);*/this.setState({linkClass: "_"+response.status})})
             .catch(exeption => {console.warn("oops:",exeption)})
+
     }
 
     render() {
         // <Street stage={entry.additional} domain={entry.domain} path={entry.path}/>
         let _this = this.props;
         //console.log("Street", _this);
+
         return (
             <div className="street">
                 <span className="stage">{_this.stage}</span>
