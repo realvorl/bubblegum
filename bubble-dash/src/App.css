@@ -1,6 +1,11 @@
+body {
+    background-color: #444;
+}
+
+
 .App {
     text-align: left;
-
+    background-color: #444;
 }
 
 .App-logo {
@@ -10,7 +15,7 @@
 
 .App-header {
     text-align: center;
-    background-color: #EFEFEF;
+    background-color: #444;
     height: 120px;
     padding: 12px;
     color: white;
@@ -33,11 +38,24 @@ div.island {
     -moz-box-shadow: inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
     box-shadow: inset 0 0 10px #000000;
-    background-color: #f9f9f9;
+    background-color: #555;
     border-radius: 3px;
     overflow: hidden;
     padding: .3em;
     margin: 0 1em 1em 1em;
+    z-index: 0;
+}
+
+div.islandZ100 {
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+    background-color: #555;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: .3em;
+    margin: 0 1em 1em 1em;
+    z-index: 100;
 }
 
 p.island-name {
@@ -61,7 +79,7 @@ span {
 
 span.stage {
     font-weight: bolder;
-    color: #0a1608;
+    color: #f1f1f1;
     text-transform: lowercase;
     font-family: monospace;
 }
@@ -84,21 +102,21 @@ a {
     font-size: 6px;
     height: 20px;
     width: 20px;
-    border:2px solid #f2f2f2;
+    border:2px solid #ddd;
     stroke: #0a1608;
     stroke-width: 2px;
 }
 
 a[class^="_20"]{
-    background-color: darkgreen;
+    background-color: forestgreen;
 }
 
 a[class^="_50"]{
-    background-color: darkred;
+    background-color: magenta;
 }
 
 a[class^="_40"]{
-    background-color: #e59123;
+    background-color: darkgoldenrod;
 }
 
 a._blue{
@@ -107,7 +125,7 @@ a._blue{
     font-size: 6px;
     height: 20px;
     width: 20px;
-    background-color: lightcyan;
+    background-color: lightskyblue;
     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
     -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
     animation-name: example;
@@ -145,8 +163,8 @@ a._blue{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-gap: 1%;
-    background-color: #f1f1f1;
-    color: #444;
+    background-color: #444;
+    color: #f1f1f1;
     padding: 0.2em;
 }
 
