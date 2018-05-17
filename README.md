@@ -20,14 +20,12 @@ but these are overpowered and / or overkill, take to much time to setup when you
  * run `./install.sh`
  * edit `bubble-dash/src/stateAndHost.json` according to your needs and save
    
- # if you are coming from the former jQuery version, you need to manually transfer your hostnames like in the following picture:
-   
-[logo]: https://github.com/realvorl/bubblegum/blob/master/transfer.png "What to expect"
+### if you are coming from the former jQuery version, you need to manually transfer your hostnames like in the following picture:
+![diff](https://github.com/realvorl/bubblegum/blob/master/transfer.png)
    
  ## operating
  1. run `./launch.sh`
  2. your standard browser should open (`http://localhost:3000`)
  
- ### HAPPY MONITORING!
-
-[logo]: https://github.com/realvorl/bubblegum/blob/master/all-greens.png "What to expect"
+### HAPPY MONITORING!
+![what to expexct](https://github.com/realvorl/bubblegum/blob/master/all-greens.png)
