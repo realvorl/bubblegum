@@ -19,8 +19,8 @@ but these are overpowered and / or overkill, take to much time to setup when you
  * `cd into the directory` where you cloned this project
  * run `./install.sh`
  * edit `bubble-dash/src/stateAndHost.json` according to your needs and save
-   <br/>if you are coming from the former jQuery version, you need to manually transfer your
-   hostnames like in the following picture:
+   
+ # if you are coming from the former jQuery version, you need to manually transfer your hostnames like in the following picture:
    
 [logo]: https://github.com/realvorl/bubblegum/blob/master/transfer.png "What to expect"
    
@@ -29,7 +29,5 @@ but these are overpowered and / or overkill, take to much time to setup when you
  2. your standard browser should open (`http://localhost:3000`)
  
  ### HAPPY MONITORING!
-
-![alt text][logo]
 
 [logo]: https://github.com/realvorl/bubblegum/blob/master/all-greens.png "What to expect"
