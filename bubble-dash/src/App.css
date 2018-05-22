@@ -162,6 +162,7 @@ a._blue{
     grid-template-columns: 33% 33% 33%;
     grid-gap: 1%;
     padding: 0.2em;
+    height: max-content;
 }
 
 .hit-the-floor {
