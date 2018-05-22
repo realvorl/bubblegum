@@ -19,8 +19,6 @@ class Island extends StyleComponent {
                 color: "#f1f1f1"
             },
         };
-        this.changeBackground = this.changeBackground.bind(this);
-        this.changeTextColor = this.changeTextColor.bind(this);
     }
 
     update() {
@@ -38,9 +36,8 @@ class Island extends StyleComponent {
         let styleCtrl = super.render();
         let stages;
         let _this = this.props.layout;
-        let _thisKey = this.props.key;
 
-        if (this.state.styleUpdate === false) {
+        if (this.state.styleUpdate === false ) {
             stages = _this.lookups.map(entry => {
                 //console.log(entry);
                 return (

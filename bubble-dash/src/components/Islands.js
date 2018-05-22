@@ -3,6 +3,11 @@ import Island from './Island'
 
 class Islands extends Component {
 
+    constructor(props) {
+        console.log("Islands", props);
+        super(props);
+    }
+
 
     render() {
 
@@ -13,7 +18,11 @@ class Islands extends Component {
             islands = this.props.allIslands.map(island => {
                 //console.log(island);
                 return (
-                    <Island key={island.title} layout={island} refresh={this.props.refresh} ileNo={count++}/>
+                    <Island key={island.title}
+                            layout={island}
+                            refresh={this.props.refresh}
+                            fw={this.props.fw}
+                            ileNo={count++}/>
                 );
             });
         }

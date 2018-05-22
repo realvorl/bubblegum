@@ -2,12 +2,13 @@
   "isOpen": false,
   "style":{
     "backgroundColor": "#444",
-    "color": "#f1f1f1"
+    "color": "#f1f1f1",
+    "fontSize": "20px"
   },
   "header": {
     "mainTitle": "BUBBLE-GUM",
     "buttonLabel": "* * *",
-    "refresh": 90
+    "refresh": 35
   },
   "islands": [
     {

@@ -4,11 +4,12 @@ import Header from './components/Header'
 import jsonConfig from './stateAndHost.json'
 
 import './App.css'
+import StyleComponent from "./components/StyleComponent";
 
-class App extends Component {
+class App extends StyleComponent {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = jsonConfig;
     }
 
@@ -19,7 +20,8 @@ class App extends Component {
                         headerTitle={this.state.header.mainTitle}
                         refresh={this.state.header.refresh}
                         buttonLabel={this.state.header.buttonLabel}/>
-                <Islands style={this.state.style}
+                <Islands fw={this.state.styleUpdate}
+                         style={this.state.style}
                          allIslands={this.state.islands}
                          refresh={this.state.header.refresh}/>
             </div>
