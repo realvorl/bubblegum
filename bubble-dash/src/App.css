@@ -5,7 +5,6 @@ body {
 
 .App {
     text-align: left;
-    background-color: #444;
 }
 
 .App-logo {
@@ -15,10 +14,8 @@ body {
 
 .App-header {
     text-align: center;
-    background-color: #444;
     height: 120px;
     padding: 12px;
-    color: white;
     text-decoration-color: whitesmoke;
 }
 
@@ -27,34 +24,35 @@ body {
 }
 
 input {
-    width: 30px;
-    text-align: center;
-    font-family: monospace;
-    box-shadow: inset 0 0 10px #000000;
-    border-radius: 5px;
+    background-color: transparent;
+    border-color: transparent;
+    width: auto;
+}
+
+input[type="color"] {
+    width: 20px;
+    border-color: transparent;
 }
 
 div.island {
     -moz-box-shadow: inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow: inset 0 0 10px #000000;
-    background-color: #555;
+    box-shadow: inset 0 0 10px #222222;
     border-radius: 3px;
     overflow: hidden;
     padding: .3em;
-    margin: 0 1em 1em 1em;
+    margin: 0 .3em .3em .3em;
     z-index: 0;
 }
 
 div.islandZ100 {
     -moz-box-shadow: inset 0 0 10px #000000;
     -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow: inset 0 0 10px #000000;
-    background-color: #555;
+    box-shadow: inset 0 0 10px #222222;
     border-radius: 3px;
     overflow: hidden;
     padding: .3em;
-    margin: 0 1em 1em 1em;
+    margin: 0 .3em .3em .3em;
     z-index: 100;
 }
 
@@ -163,8 +161,6 @@ a._blue{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-gap: 1%;
-    background-color: #444;
-    color: #f1f1f1;
     padding: 0.2em;
 }
 
@@ -176,4 +172,9 @@ a._blue{
     font-family: Helvetica, sans-serif;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
     text-align: center;
+}
+
+.customize {
+    opacity: 55%;
+    margin: 2px;
 }

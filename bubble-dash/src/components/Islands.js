@@ -3,15 +3,17 @@ import Island from './Island'
 
 class Islands extends Component {
 
+
     render() {
 
         let islands;
 
         if (this.props.allIslands) {
+            let count = 0;
             islands = this.props.allIslands.map(island => {
                 //console.log(island);
                 return (
-                    <Island key={island.title} layout={island} refresh={this.props.refresh} />
+                    <Island key={island.title} layout={island} refresh={this.props.refresh} ileNo={count++}/>
                 );
             });
         }

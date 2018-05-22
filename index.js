@@ -38,7 +38,7 @@ app.get("/check", function (request, response) {
         })
     });
     checkPromise.then(function (res) {
-        console.log(res.responseUrl + " :: " + res.statusCode);
+        console.log("+ " + (new Date()) + " -> "+res.responseUrl + " :: " + res.statusCode);
         makeDecision(res.statusCode, response);
     });
     checkPromise.catch(function (err) {
