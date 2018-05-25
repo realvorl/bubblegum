@@ -1,5 +1,5 @@
 body {
-    background-color: #444;
+    background-color: #444444;
 }
 
 
@@ -178,4 +178,18 @@ a._blue{
 .customize {
     opacity: 55%;
     margin: 2px;
+}
+
+
+
+span.cBackground{
+    padding: 0 0.6rem ;
+    border: solid 1px #aaa;
+}
+
+input.cBackground{
+    width: 30px;
+    height: 31px;
+    vertical-align: middle;
+    padding: 0;
 }

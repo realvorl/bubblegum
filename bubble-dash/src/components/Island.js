@@ -14,10 +14,7 @@ class Island extends StyleComponent {
         this.state = {
             time: 0,
             styleUpdate: false,
-            style: {
-                backgroundColor: "#444",
-                color: "#f1f1f1"
-            },
+            style: this.props.style,
         };
     }
 
