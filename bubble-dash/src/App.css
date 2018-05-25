@@ -179,3 +179,17 @@ a._blue{
     opacity: 55%;
     margin: 2px;
 }
+
+
+
+span.cBackground{
+    padding: 0 0.6rem ;
+    border: solid 1px #aaa;
+}
+
+input.cBackground{
+    width: 30px;
+    height: 31px;
+    vertical-align: middle;
+    padding: 0;
+}
