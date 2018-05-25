@@ -7,11 +7,6 @@ class StyleComponent extends Component {
         super(props);
         this.state = {
             styleUpdate: false,
-            style: {
-                backgroundColor: "#444",
-                color: "#f1f1f1",
-                fontSize: "20px"
-            }
         }
         this.changeBackground = this.changeBackground.bind(this);
         this.changeTextColor = this.changeTextColor.bind(this);
@@ -23,6 +18,7 @@ class StyleComponent extends Component {
     render() {
       return (
           <ToolBar
+              style={this.state.style}
               changeBackground={this.changeBackground}
               changeTextColor={this.changeTextColor}
               incTextSize={this.incTextSize}
@@ -36,6 +32,7 @@ class StyleComponent extends Component {
 
         console.log(this);
         this.setState({style: newStyle, styleUpdate: true});
+
         e.stopPropagation();
     }
 

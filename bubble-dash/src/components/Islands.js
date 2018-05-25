@@ -22,7 +22,8 @@ class Islands extends Component {
                             layout={island}
                             refresh={this.props.refresh}
                             fw={this.props.fw}
-                            ileNo={count++}/>
+                            ileNo={count++}
+                            style={this.props.style}/>
                 );
             });
         }
