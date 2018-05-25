@@ -180,7 +180,15 @@ a._blue{
     margin: 2px;
 }
 
-
+input.small-border{
+    font-family: monospace;
+    font-size: large;
+    color: #DDDDF4;
+    border: hidden;
+    width: 2em;
+    text-align: center;
+    font-weight: bolder;
+}
 
 span.cBackground{
     padding: 0 0.6rem ;
