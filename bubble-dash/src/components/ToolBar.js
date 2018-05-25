@@ -14,9 +14,9 @@ class ToolBar extends Component {
         return (
             <div className="customize">
                 <input type="color" className="cBackground" onChange={this.props.changeBackground}/>
-                <input type="color" className="cTextColor" onChange={this.props.changeTextColor}/>
-                <span className="cBackground" onClick={this.props.decTextSize}> [-] </span>
-                <span className="cBackground" onClick={this.props.incTextSize}> [+] </span>
+                <input type="color" className="cBackground" onChange={this.props.changeTextColor}/>
+                <span className="cBackground" onClick={this.props.decTextSize}>-</span>
+                <span className="cBackground" onClick={this.props.incTextSize}>+</span>
             </div>
         );
     }
