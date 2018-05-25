@@ -31,35 +31,24 @@ class StyleComponent extends Component {
       )
     }
 
-    cloneObject(obj) {
-        var clone = {};
-        for (var i in obj) {
-            if (typeof(obj[i]) === "object" && obj[i] != null)
-                clone[i] = this.cloneObject(obj[i]);
-            else
-                clone[i] = obj[i];
-        }
-        return clone;
-    }
-
     changeBackground(e) {
-        let oldStyle = this.cloneObject(this.state.style);
-        const newStyle = Object.assign(oldStyle, {backgroundColor: e.target.value});
+        const newStyle = {...this.state.style, backgroundColor: e.target.value }
+
         console.log(this);
         this.setState({style: newStyle, styleUpdate: true});
         e.stopPropagation();
     }
 
     changeTextColor(e) {
-        let oldStyle = this.cloneObject(this.state.style);
-        const newStyle = Object.assign(oldStyle, {color: e.target.value});
+        const newStyle = {...this.state.style, color: e.target.value }
+
         console.log(this);
         this.setState({style: newStyle, styleUpdate: true});
         e.stopPropagation();
     }
 
     incTextSize(e) {
-        let oldStyle = this.cloneObject(this.state.style);
+        let oldStyle = {...this.state.style};
         console.log("fontSize",oldStyle.fontSize);
         let size;
         if (oldStyle.fontSize === undefined) {
@@ -74,7 +63,7 @@ class StyleComponent extends Component {
     }
 
     decTextSize(e) {
-        let oldStyle = this.cloneObject(this.state.style);
+        let oldStyle = {...this.state.style};
         let size ;
         if (oldStyle.fontSize === undefined) {
             size = 20
