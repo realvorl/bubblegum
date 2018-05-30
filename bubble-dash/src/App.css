@@ -94,20 +94,19 @@ span.path {
     font-family: monospace;
 }
 
-a {
-    float: left;
-    border-radius: 20px;
-    font-size: 6px;
+.street a {
+    display: inline-block;
+    border-radius: 50%;
     height: 20px;
     width: 20px;
     border:2px solid #ddd;
     stroke: #0a1608;
     stroke-width: 2px;
+    background-color: forestgreen;
+    vertical-align: middle;
 }
 
-a[class^="_20"]{
-    background-color: forestgreen;
-}
+
 
 a[class^="_50"]{
     background-color: magenta;
