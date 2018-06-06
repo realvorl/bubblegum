@@ -189,6 +189,10 @@ input.small-border{
     font-weight: bolder;
 }
 
+.cBackground{
+    cursor: pointer;
+}
+
 span.cBackground{
     padding: 0 0.6rem ;
     border: solid 1px #aaa;
