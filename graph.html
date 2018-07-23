@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                [ 'timestamp'  , 'path',        'status' ],
+                [ 1532384676502, 2,  200      ],
+                [ 1532384686512, 2,  200      ],
+                [ 1532384696522, 2,  400      ],
+                [ 1532384776552, 2,  200      ]
+              ]);
+
+            var options = {
+                title: 'Services',
+                hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+                vAxis: {minValue: 0}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<div id="chart_div" style="width: 100%; height: 500px;"></div>
+</body>
+</html>
