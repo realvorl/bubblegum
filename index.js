@@ -72,5 +72,12 @@ app.get("/metrics", function (req, res) {
 
 const makeDecision = function (whichOne, message, response) {
     response.status(message);
+    exposeToProm(whichOne,message);
     response.send("");
 };
+
+const exposeToProm = function (path, message) {
+    var entry = {"label": path, "value":parseInt(message)};
+    monitorMap.set(path, entry);
+    console.log(monitorMap.get(path));
+}
