@@ -21,13 +21,33 @@ but these are overpowered and / or overkill, take to much time to setup when you
  * edit `bubble-dash/src/stateAndHost.json` according to your needs and save
    
 ### if you are coming from the former jQuery version, you need to manually transfer your hostnames like in the following picture:
-![diff](https://github.com/realvorl/bubblegum/blob/develop/transfer.png)
+![diff](https://github.com/realvorl/bubblegum/blob/develop/media/transfer.png)
    
- ## operating
+## operating
  1. run `./launch.sh`
  2. your standard browser should open (`http://localhost:3000`)
  
 ### HAPPY MONITORING!
-![what to expect](https://github.com/realvorl/bubblegum/blob/develop/all-greens.png)
+![what to expect](https://github.com/realvorl/bubblegum/blob/develop/media/all-greens.png)
 
-![what to expexct](https://github.com/realvorl/bubblegum/blob/develop/all-greens-custom.png)
+![what to expexct](https://github.com/realvorl/bubblegum/blob/develop/media/all-greens-custom.png)
+
+## Now exposing /metrics to Prometheus
+
+
+![suggested dashboard](https://github.com/realvorl/bubblegum/blob/develop/media/added-prometheus.png)
+
+## Recipe for getting Grafana with Prometheus up and running
+
+ 1. docker pull grafana/grafana
+ 2. docker pull quay.io/prometheus (also clone its source code from github, you will change it a bit)
+ 3. change directory to where you cloned 
+ 4. configure Prometheus to include /metrics endpoint 
+    > to configure `prometheus.yml` (see /docker/prometheus/prometheus.yml)
+ 5. in your cloned prometheus project run `docker build -t bubblegum/prometheus`
+ 6. ( launch `bubblegum` if it is not running already )
+ 7. start prometheus: `docker run --name prometheus --network="host" -d bubblegum/prometheus:0.0.1`
+ 8. start grafana and do the initial setup
+    > DONE!
+
+
