@@ -31,7 +31,7 @@ class Street extends Component {
                 <a href={"https://" + _this.domain + "/" + _this.path} target="_blank"
                     className={this.state.linkClass}/>
                 <span className="path">{_this.path}</span>
-                <span className="domain">{_this.domain}</span>
+                <span className="domain">{/*_this.domain*/}</span>
                 <span className="stage">{_this.stage}</span>
             </div>
         );
