@@ -1,0 +1,70 @@
+{
+  "isOpen": false,
+  "style":{
+    "backgroundColor": "#444444",
+    "color": "#f1f1f1",
+    "fontSize": "20px"
+  },
+  "header": {
+    "mainTitle": "BUBBLE-GUM",
+    "buttonLabel": "* * *",
+    "refresh": 35
+  },
+  "islands": [
+    {
+      "title": "Island: google",
+      "lookups": [
+        {
+          "additional": "DE",
+          "domain": "google.de",
+          "path": ""
+        },
+        {
+          "additional": "AT",
+          "domain": "google.at",
+          "path": ""
+        },
+        {
+          "additional": "RO",
+          "domain": "google.ro",
+          "path": ""
+        }
+      ]
+    },
+    {
+      "title": "Island: Amazon",
+      "lookups": [
+        {
+          "additional": "DE",
+          "domain": "amazon.de",
+          "path": ""
+        },
+        {
+          "additional": "AT",
+          "domain": "amazon.at",
+          "path": ""
+        },
+        {
+          "additional": "RO",
+          "domain": "amazon.ro",
+          "path": ""
+        }
+      ]
+    },
+    {
+      "title": "Island: 9GAG",
+      "lookups": [
+        {
+          "additional": "COM",
+          "domain": "9gag.com",
+          "path": ""
+        },
+        {
+          "additional": "COM",
+          "domain": "9gag.com",
+          "path": "trending"
+        }
+      ]
+    }
+  ]
+}
