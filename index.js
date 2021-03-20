@@ -13,7 +13,13 @@ const monitorMap = new Map();
 
 app.use(express.static('public'));
 
-const server = app.listen(3001, function () {
+let HOST_PORT = 3399; //fallback port number
+
+if (process.env.BUBBLE_HOST_PORT) {
+   HOST_PORT = process.env.BUBBLE_HOST_PORT;
+}
+
+const server = app.listen(HOST_PORT, function () {
     console.log('Server up and running...🏃🏃🏃');
     console.log("Listening on port %s", server.address().port);
 });
