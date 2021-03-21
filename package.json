@@ -3,7 +3,7 @@
 	"repository": {
 		"url": "git@github.com:vos-0-org/bubblegum.git"
 	},
-	"version": "0.2.0-alpha.2",
+	"version": "0.2.0-alpha.3",
 	"description": "display an 'LED' indicator for every microservice",
 	"main": "index.js",
 	"scripts": {
