@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/delete-package-versions@v1
         with:
-          package-version-ids: 
-          - "MDE0OlBhY2thZ2VWZXJzaW9uNzgyMTgxMg=="
-          - "MDE0OlBhY2thZ2VWZXJzaW9uNzgxNzM0Mg=="
+          package-version-ids: |
+           MDE0OlBhY2thZ2VWZXJzaW9uNzgyMTgxMg==,
+           MDE0OlBhY2thZ2VWZXJzaW9uNzgxNzM0Mg==
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
