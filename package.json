@@ -1,6 +1,5 @@
 {
-	"name": "@vos-0-org/monitor-ms",
-	"repository": "monitor-ms",
+	"name": "monitor-ms",
 	"version": "0.1.0",
 	"description": "display an 'LED' indicator for every microservice",
 	"main": "index.js",
