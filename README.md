@@ -49,7 +49,111 @@ but these are overpowered and / or overkill, take to much time to setup when you
  8. start grafana and do the initial setup
     > DONE!
 
+## Version houskeeping 
+
+```js
+query v {
+  repository(name: "bubblegum", owner: "vos-0-org") {
+    packages(orderBy: {direction: ASC, field: CREATED_AT}, last: 100) {
+      totalCount
+      nodes {
+        versions(last: 100) {
+          edges {
+            cursor
+            node {
+              id
+              v: version
+              stats: statistics{
+                cnt: downloadsTotalCount
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+```
+
+this `GraphQl` query run against the GitHub graphql endpoint `https://graphql.github.com/graphql/proxy` will output this `data.json`: 
+
+```json
+{
+  "data": {
+    "repository": {
+      "packages": {
+        "totalCount": 1,
+        "nodes": [
+          {
+            "versions": {
+              "edges": [
+                {
+                  "cursor": "Y3Vyc29yOnYyOpHOAHdaEw==",
+                  "node": {
+                    "id": "MDE0OlBhY2thZ2VWZXJzaW9uNzgyMTg0Mw==",
+                    "v": "0.2.0-alpha.3",
+                    "stats": {
+                      "cnt": 1
+                    }
+                  }
+                },
+                {
+                  "cursor": "Y3Vyc29yOnYyOpHOAHdZ9A==",
+                  "node": {
+                    "id": "MDE0OlBhY2thZ2VWZXJzaW9uNzgyMTgxMg==",
+                    "v": "0.2.0-alpha.2",
+                    "stats": {
+                      "cnt": 0
+                    }
+                  }
+                },
+                {
+                  "cursor": "Y3Vyc29yOnYyOpHOAHdKNg==",
+                  "node": {
+                    "id": "MDE0OlBhY2thZ2VWZXJzaW9uNzgxNzc4Mg==",
+                    "v": "0.2.0-alpha.1",
+                    "stats": {
+                      "cnt": 1
+                    }
+                  }
+                },
+                {
+                  "cursor": "Y3Vyc29yOnYyOpHOAHdIfg==",
+                  "node": {
+                    "id": "MDE0OlBhY2thZ2VWZXJzaW9uNzgxNzM0Mg==",
+                    "v": "0.1.0",
+                    "stats": {
+                      "cnt": 0
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
+```
+
+Parsing the result from above with the following `jq` filter: 
+
+`cat data.json | jq '.data.repository.packages.nodes[].versions.edges[].node as $node | select($node.stats.cnt == 0) | $node.id '`
+
+will provide exactly the versions of the packages that did not receive any downloads (from the statistics): 
+
+> "MDE0OlBhY2thZ2VWZXJzaW9uNzgyMTg0Mw=="  
+> "MDE0OlBhY2thZ2VWZXJzaW9uNzgxNzc4Mg=="
+
+These are the ids that need to be provided to the aformentioned  **[Delete Package Versions - GitHub Action.][5]**
+
+
 [1]:transfer.png
 [2]:media/all-greens.png
 [3]:media/all-greens-custom.png
 [4]:media/added-prometheus.png
+[5]:https://github.com/marketplace/actions/delete-package-versions
