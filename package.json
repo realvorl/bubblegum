@@ -1,5 +1,8 @@
 {
-	"name": "monitor-ms",
+	"name": "@vos-0-org/monitor-ms",
+	"repository": {
+		"url": "git@github.com:vos-0-org/bubblegum.git"
+	},
 	"version": "0.1.0",
 	"description": "display an 'LED' indicator for every microservice",
 	"main": "index.js",
