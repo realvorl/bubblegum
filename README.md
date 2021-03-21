@@ -21,21 +21,21 @@ but these are overpowered and / or overkill, take to much time to setup when you
  * edit `bubble-dash/src/stateAndHost.json` according to your needs and save
    
 ### if you are coming from the former jQuery version, you need to manually transfer your hostnames like in the following picture:
-![diff](https://github.com/realvorl/bubblegum/blob/develop/media/transfer.png)
+![diff][1]
    
 ## operating
  1. run `./launch.sh`
  2. your standard browser should open (`http://localhost:3000`)
  
 ### HAPPY MONITORING!
-![what to expect](https://github.com/realvorl/bubblegum/blob/develop/media/all-greens.png)
+![what to expect][2]
 
-![what to expexct](https://github.com/realvorl/bubblegum/blob/develop/media/all-greens-custom.png)
+![what to expexct][3]
 
 ## Now exposing /metrics to Prometheus
 
 
-![suggested dashboard](https://github.com/realvorl/bubblegum/blob/develop/media/added-prometheus.png)
+![suggested dashboard][4]
 
 ## Recipe for getting Grafana with Prometheus up and running
 
@@ -50,4 +50,7 @@ but these are overpowered and / or overkill, take to much time to setup when you
  8. start grafana and do the initial setup
     > DONE!
 
-
+[1]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/transfer.png
+[2]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/media/all-greens.png
+[3]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/media/all-greens-custom.png
+[4]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/media/added-prometheus.png
