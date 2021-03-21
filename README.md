@@ -34,7 +34,6 @@ but these are overpowered and / or overkill, take to much time to setup when you
 
 ## Now exposing /metrics to Prometheus
 
-
 ![suggested dashboard][4]
 
 ## Recipe for getting Grafana with Prometheus up and running
@@ -50,7 +49,7 @@ but these are overpowered and / or overkill, take to much time to setup when you
  8. start grafana and do the initial setup
     > DONE!
 
-[1]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/transfer.png
-[2]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/media/all-greens.png
-[3]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/media/all-greens-custom.png
-[4]:https://raw.githubusercontent.com/vos-0-org/bubblegum/develop/media/added-prometheus.png
+[1]:transfer.png
+[2]:media/all-greens.png
+[3]:media/all-greens-custom.png
+[4]:media/added-prometheus.png
