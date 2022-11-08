@@ -6,7 +6,7 @@
     "react": "^17.0.1",
     "react-dom": "^16.14.0",
     "react-draggable": "^3.0.5",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
